@@ -16,6 +16,6 @@ class DropColumns(BaseEstimator, TransformerMixin):
         return data.drop(labels=self.columns, axis='columns')
     
     def scaleColumns(df, cols_to_scale):
-    for col in cols_to_scale:
-        df[col] = pd.DataFrame(min_max_scaler.fit_transform(pd.DataFrame(df_data_1[col])),columns=[col])
+        for col in cols_to_scale:
+            df[col] = pd.DataFrame(min_max_scaler.fit_transform(pd.DataFrame(df_data_1[col])),columns=[col])
         return df
