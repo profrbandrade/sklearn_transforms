@@ -1,8 +1,8 @@
-from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.base import BaseEstimator, TransformerMixin,preprocessing
 
 
 # All sklearn Transforms must have the `transform` and `fit` methods
-class DropColumns(BaseEstimator, TransformerMixin):
+class DropColumns(BaseEstimator, TransformerMixin,preprocessing):
     def __init__(self, columns):
         self.columns = columns
 
