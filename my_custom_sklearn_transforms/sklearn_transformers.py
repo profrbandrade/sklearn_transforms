@@ -1,4 +1,4 @@
-from sklearn.base import BaseEstimator, TransformerMixin, preprocessing
+from sklearn.base import BaseEstimator, TransformerMixin
 
 
 # All sklearn Transforms must have the `transform` and `fit` methods
