@@ -1,5 +1,10 @@
-from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.base import BaseEstimator, TransformerMixin, preprocessing
 
+
+def scaleColumns(df, cols_to_scale):
+    for col in cols_to_scale:
+        df[col] = pd.DataFrame(min_max_scaler.fit_transform(pd.DataFrame(df_data_1[col])),columns=[col])
+    return df
 
 # All sklearn Transforms must have the `transform` and `fit` methods
 class DropColumns(BaseEstimator, TransformerMixin):
