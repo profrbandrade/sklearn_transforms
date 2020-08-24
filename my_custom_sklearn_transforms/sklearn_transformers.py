@@ -3,7 +3,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 # All sklearn Transforms must have the `transform` and `fit` methods
-class DropColumns(BaseEstimator, TransformerMixin,preprocessing):
+class DropColumns(BaseEstimator, TransformerMixin,MinMaxScaler):
     def __init__(self, columns):
         self.columns = columns
 
